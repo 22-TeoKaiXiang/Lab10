@@ -44,9 +44,10 @@ namespace Tests
         [Test]
         public void TestSquareRoot()
         {
-            result = Calculator.CalculatePair(64, 2, "√");
+            result = Calculator.CalculatePair(2, 64, "√");
             Assert.AreEqual(result, 8);
         }
+        //power
         [Test]
         public void TestPower()
         {
@@ -102,7 +103,7 @@ namespace Tests
             //use yield to skip a frame
             yield return null;
 
-            result = Calculator.CalculatePair(64, 2, "√");
+            result = Calculator.CalculatePair(2, 64, "√");
             Assert.AreEqual(result, 8);
         }
         [UnityTest]
