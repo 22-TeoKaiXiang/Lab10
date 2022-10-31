@@ -108,8 +108,7 @@ public class Calculator : MonoBehaviour {
 				result = x / y;
 				break;
             case "√":
-                result = Mathf.Sqrt(y);
-                
+                result = Mathf.Sqrt(y);                
                 break;
             case "^":
                 result = Mathf.Pow(x, y);
