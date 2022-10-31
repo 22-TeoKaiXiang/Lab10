@@ -8,21 +8,114 @@ namespace Tests
 {
     public class TestSuite
     {
-        // A Test behaves as an ordinary method
+        private float result = 0.0f;
+
         [Test]
-        public void TestSuiteSimplePasses()
+        public void TestAddition()
         {
-            // Use the Assert class to test conditions
+            //use the assert class to test conditions
+            result = Calculator.CalculatePair(5, 2, "+");
+            Assert.AreEqual(result, 7);
+        }
+        //subtraction
+        [Test]
+        public void TestSubtract()
+        {
+            //use the assert class to test conditions
+            result = Calculator.CalculatePair(5, 2, "-");
+            Assert.AreEqual(result, 3);
+        }
+        //multipication
+        [Test]
+        public void TestMultiplication()
+        {
+            result = Calculator.CalculatePair(5, 2, "*");
+            Assert.AreEqual(result, 10);
+               
+        }
+        //division
+        [Test]
+        public void TestDivision()
+        {
+            result = Calculator.CalculatePair(6, 2, "/");
+            Assert.AreEqual(result, 3);
+        }
+        //square root
+        [Test]
+        public void TestSquareRoot()
+        {
+            result = Calculator.CalculatePair(64, 2, "√");
+            Assert.AreEqual(result, 8);
+        }
+        [Test]
+        public void TestPower()
+        {
+            result = Calculator.CalculatePair(8, 2, "^");
+            Assert.AreEqual(result, 64);
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
+
         [UnityTest]
-        public IEnumerator TestSuiteWithEnumeratorPasses()
+        public IEnumerator TestUnityAddition()
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
+            //use the assert class to test conditions
+            //use yield to skip a frame
             yield return null;
+
+            result = Calculator.CalculatePair(5, 2, "+");
+            Assert.AreEqual(result, 7);
         }
+        [UnityTest]
+        public IEnumerator TestUnitySubtract()
+        {
+            //use the assert class to test conditions
+            //use yield to skip a frame
+            yield return null;
+
+            result = Calculator.CalculatePair(5, 2, "-");
+            Assert.AreEqual(result, 3);
+        }
+        [UnityTest]
+        public IEnumerator TestUnityMultiply()
+        {
+            //use the assert class to test conditions
+            //use yield to skip a frame
+            yield return null;
+
+            result = Calculator.CalculatePair(5, 2, "*");
+            Assert.AreEqual(result, 10);
+        }
+        [UnityTest]
+        public IEnumerator TestUnityDivide()
+        {
+            //use the assert class to test conditions
+            //use yield to skip a frame
+            yield return null;
+
+            result = Calculator.CalculatePair(6, 2, "/");
+            Assert.AreEqual(result, 3);
+        }
+        [UnityTest]
+        public IEnumerator TestUnitySquareRoot()
+        {
+            //use the assert class to test conditions
+            //use yield to skip a frame
+            yield return null;
+
+            result = Calculator.CalculatePair(64, 2, "√");
+            Assert.AreEqual(result, 8);
+        }
+        [UnityTest]
+        public IEnumerator TestUnityPower()
+        {
+            //use the assert class to test conditions
+            //use yield to skip a frame
+            yield return null;
+
+            result = Calculator.CalculatePair(8, 2, "^");
+            Assert.AreEqual(result, 64);
+        }
+
+
     }
 }
